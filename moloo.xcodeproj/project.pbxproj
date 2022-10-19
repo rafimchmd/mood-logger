@@ -26,6 +26,7 @@
 		5BC2FAA72900207600E3002F /* AccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2FAA62900207600E3002F /* AccountRouter.swift */; };
 		5BC2FAAA2900208900E3002F /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2FAA92900208900E3002F /* AccountViewController.swift */; };
 		5BC2FAAD2900209600E3002F /* AccountStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC2FAAC2900209600E3002F /* AccountStoryboard.storyboard */; };
+		5BC2FAB52900283700E3002F /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2FAB42900283700E3002F /* UIViewExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		5BC2FAA62900207600E3002F /* AccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRouter.swift; sourceTree = "<group>"; };
 		5BC2FAA92900208900E3002F /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		5BC2FAAC2900209600E3002F /* AccountStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccountStoryboard.storyboard; sourceTree = "<group>"; };
+		5BC2FAB42900283700E3002F /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		84FAD1CAD96A703CF1A665B4 /* Pods-moloo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moloo.debug.xcconfig"; path = "Target Support Files/Pods-moloo/Pods-moloo.debug.xcconfig"; sourceTree = "<group>"; };
 		8C0933D46B2D718020FE8D42 /* Pods_moloo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moloo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -167,6 +169,7 @@
 		5B33847A28EC306200F0EB3A /* moloo */ = {
 			isa = PBXGroup;
 			children = (
+				5BC2FAB32900282800E3002F /* Extension */,
 				5B1935A628EC38DA003EB243 /* Modules */,
 				5B33849428EC377B00F0EB3A /* Application */,
 				5B33849328EC376A00F0EB3A /* Resource */,
@@ -261,6 +264,14 @@
 				5BC2FAA62900207600E3002F /* AccountRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		5BC2FAB32900282800E3002F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2FAB42900283700E3002F /* UIViewExt.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D34398FE561F22F6DEE6DF75 /* Frameworks */ = {
@@ -406,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC2FAB52900283700E3002F /* UIViewExt.swift in Sources */,
 				5BC2FAA72900207600E3002F /* AccountRouter.swift in Sources */,
 				5B33847C28EC306200F0EB3A /* AppDelegate.swift in Sources */,
 				5BC2FAAA2900208900E3002F /* AccountViewController.swift in Sources */,

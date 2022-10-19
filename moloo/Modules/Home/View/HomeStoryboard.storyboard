@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,18 +17,81 @@
                     <view key="view" contentMode="scaleToFill" id="iIb-L0-ZPQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="llq-lF-l8G">
+                                <rect key="frame" x="0.0" y="68" width="414" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="IfU-1P-zou"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wzl-rg-JFQ">
+                                    <size key="itemSize" width="208" height="107"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="10" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="briefCell" id="S2j-dU-Fhy">
+                                        <rect key="frame" x="16" y="11.5" width="208" height="107"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hJM-dX-bRk">
+                                            <rect key="frame" x="0.0" y="0.0" width="208" height="107"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPX-Uf-Pcn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="208" height="107"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ke1-MR-X46">
+                                                            <rect key="frame" x="16" y="16" width="43" height="21"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="ke1-MR-X46" firstAttribute="leading" secondItem="MPX-Uf-Pcn" secondAttribute="leading" constant="16" id="f8G-QQ-Fhe"/>
+                                                        <constraint firstItem="ke1-MR-X46" firstAttribute="top" secondItem="MPX-Uf-Pcn" secondAttribute="top" constant="16" id="tMc-CF-8z8"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="radiusCorner">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="MPX-Uf-Pcn" secondAttribute="bottom" id="Et9-5U-c2m"/>
+                                                <constraint firstItem="MPX-Uf-Pcn" firstAttribute="leading" secondItem="hJM-dX-bRk" secondAttribute="leading" id="F07-VV-uov"/>
+                                                <constraint firstAttribute="trailing" secondItem="MPX-Uf-Pcn" secondAttribute="trailing" id="UcK-Ji-s6t"/>
+                                                <constraint firstItem="MPX-Uf-Pcn" firstAttribute="top" secondItem="hJM-dX-bRk" secondAttribute="top" id="ZW2-wa-n6R"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="208" height="107"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="CKX-Tl-gnI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="llq-lF-l8G" firstAttribute="trailing" secondItem="CKX-Tl-gnI" secondAttribute="trailing" id="6tE-eb-4ap"/>
+                            <constraint firstItem="llq-lF-l8G" firstAttribute="leading" secondItem="CKX-Tl-gnI" secondAttribute="leading" id="8Bi-J4-ANz"/>
+                            <constraint firstItem="llq-lF-l8G" firstAttribute="top" secondItem="CKX-Tl-gnI" secondAttribute="top" constant="24" id="vZS-BU-F2w"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionCollectionView" destination="llq-lF-l8G" id="62a-BZ-Gd8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIA-ot-WqS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-91" y="133"/>
+            <point key="canvasLocation" x="-91.304347826086968" y="132.58928571428572"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
